@@ -1,0 +1,25 @@
+:root {
+  --seasalt: #f8f9faff;
+  --antiflash-white: #e9ecefff;
+  --platinum: #dee2e6ff;
+  --french-gray: #ced4daff;
+  --french-gray-2: #adb5bdff;
+  --slate-gray: #6c757dff;
+  --outer-space: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
+
+  --input-border: #222324;
+  --input-border-hover: #535a61;
+  --input-border-focus: rgb(143, 31, 31);
+  --input-border-invalid: #5c4949;
+  --input-background: #2e3036;
+  --input-background-hover: #303238;
+  --input-background-focus: #303238;
+
+  --button-background: #25272b;
+  --button-hover-background: #1c1d20;
+  --button-active-background: rgb(143, 31, 31);
+
+  --default-font: "Open Sans", sans-serif;
+}
