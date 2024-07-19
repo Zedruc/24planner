@@ -1,33 +1,29 @@
-# 24planner
 
-This template should help get you started developing with Vue 3 in Vite.
+# 24 Planner
 
-## Recommended IDE Setup
+Route planning solution for ATC24 pilots
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[**Discord Server**](https://discord.gg/XC9tTTWMT5)
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+* [Contributing](#contributing)
 
-## Customize configuration
+## Issues & Suggestions
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+If you wish to report any bugs or want to give feedback, you are very welcome to do so!  
+It greatly aids development.
 
-## Project Setup
+    1. Open an issue and tag it either `Bug Report` or `Feedback`
+    2. Describe the issue as well as possible
+    3. Propose possible solutions that you think would suit the program
 
-```sh
-npm install
-```
+# Contributing
 
-### Compile and Hot-Reload for Development
+To contribute you can either tackle one of the roadmap items or do your own thing. Code will be reviewed by me (Zedruc) before accepting it.  
+General Guideline:
 
-```sh
-npm run dev
-```
+1. **Do NOT** reformat a whole file and push that, as it makes code review harder, which will 100% lead to rejection of pull requests.
 
-### Type-Check, Compile and Minify for Production
+* Default indent tab = 2 spaces
 
-```sh
-npm run build
-```
+2. The only API allowed to be used is `api.zedruc.net` (Not documented as it only has one endpoint for the suite anyway), any features using      external APIs I will add myself.

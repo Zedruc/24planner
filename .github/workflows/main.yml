@@ -48,13 +48,6 @@ jobs:
           host: zedruc.net
           username: ${{ secrets.FTP_USERNAME }}
           port: 22
-          password: ${{ secrets.ftp_password }}
+          password: ${{ secrets.FTP_PASSWORD }}
           localPath: ./dist/
-          remotePath: ${{ secrets.SUITE_REMOTE_PATH}}
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-
+          remotePath: ${{ secrets.REMOTE_PATH}}
