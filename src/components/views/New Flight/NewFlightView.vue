@@ -2,12 +2,11 @@
 import GeneralButton from '@/components/GeneralButton.vue';
 import CogIcon from '@/components/icons/CogIcon.vue';
 
-import FlightInfoPanel from './FlightInfoPanel.vue';
 import AvailableRoutes from './AvailableRoutes.vue';
-import DepartureArrivalOptions from './DepartureArrivalOptions.vue';
+import FlightInfoPanel from './FlightInfoPanel.vue';
 
-import { getAirports, getWaypoints, getGraphData, findAirport, getFixCoordinates } from '../../../data/waypoints.ts';
-import { findRoute, buildGraph, shuffle } from '../../../scripts/route_finder';
+import { findAirport, getFixCoordinates, getWaypoints } from '../../../data/waypoints.ts';
+import { buildGraph, findRoute, shuffle } from '../../../scripts/route_finder';
 
 import L from 'leaflet';
 import "leaflet/dist/leaflet.css";
@@ -80,13 +79,14 @@ import "leaflet/dist/leaflet.css";
 
 
 #map_canvas {
-  width: calc(2000px/2);
-  height: calc(1653px/2);
+  height: calc(100vh - 11rem);
+  width: calc(55vw - 11rem);
+  background-color: #d3ebfc;
 }
+
 </style>
 
 <script>
-import FlightInfoPanel from './FlightInfoPanel.vue';
 import { lastFlight } from '@/sharedRefs';
 
 export default {
@@ -114,10 +114,11 @@ export default {
       attributionControl: false,
     })
     const bounds =[[0, 0],[1653, 2000]]
+    const maxBounds =[[-2000, -2000],[3653, 4000]]
 
-    var image = L.imageOverlay('./Enroute_Chart_PTFS.png', bounds).addTo(this.map);
+    var image = L.imageOverlay('/24planner/Enroute_Chart_PTFS.png', bounds).addTo(this.map);
 
-    this.map.setMaxBounds(bounds);
+    this.map.setMaxBounds(maxBounds);
     this.map.fitBounds(bounds);
 
     // Draw all waypoints

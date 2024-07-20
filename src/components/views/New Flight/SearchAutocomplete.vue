@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="text" @input="onChange" @change="onChangeReal" v-model="search" @keydown.down="onArrowDown"
-      @keydown.up="onArrowUp" @keydown.enter="onEnter" :placeholder="customPlaceHolder" />
+      @keydown.up="onArrowUp" @keydown.enter="onEnter" :placeholder="customPlaceHolder" @blur="onEnter"/>
 
     <div class="autocomplete">
       <ul id="autocomplete-results" v-show="isOpen" class="autocomplete-results">
