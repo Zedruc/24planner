@@ -79,10 +79,9 @@ import "leaflet/dist/leaflet.css";
 
 
 #map_canvas {
-  width: calc(2000px/2);
-  /* height: calc(1653px/2); */
   height: calc(100vh - 11rem);
   width: calc(55vw - 11rem);
+  background-color: #d3ebfc;
 }
 
 </style>
@@ -115,10 +114,11 @@ export default {
       attributionControl: false,
     })
     const bounds =[[0, 0],[1653, 2000]]
+    const maxBounds =[[-2000, -2000],[3653, 4000]]
 
     var image = L.imageOverlay('/24planner/Enroute_Chart_PTFS.png', bounds).addTo(this.map);
 
-    this.map.setMaxBounds(bounds);
+    this.map.setMaxBounds(maxBounds);
     this.map.fitBounds(bounds);
 
     // Draw all waypoints
