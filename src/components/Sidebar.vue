@@ -35,7 +35,7 @@ import UtcClock from './UtcClock.vue';
         <UtcClock />
       </div>
       <hr class="infoDivider">
-      <span class="appVersion">Version 1.0.0</span>
+      <span class="appVersion">Version 1.0.3</span>
     </div>
   </div>
 </template>
