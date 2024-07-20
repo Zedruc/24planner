@@ -106,6 +106,7 @@ export default {
       }
       this.isOpen = false;
       this.arrowCounter = -1;
+      this.$emit('result', result);
     },
   },
 };
